@@ -18,8 +18,19 @@
     "sub": "Disponibilités et tarifs en direct"
   },
   "links": [
-    { "url": "https://www.tiktok.com/@prestivo3?_r=1&_t=ZS-9Bd3D8PABvQ" },
-    { "url": "https://www.facebook.com/people/Prestivo-Cars/61570318172419/", "sub": "Prestivo Cars" },
-    { "url": "https://prestivocar.com/" }
+    {
+      "url": "https://prestivocar.com/",
+      "icon": "mobile",
+      "label": "Application web",
+      "sub": "Réserver depuis votre téléphone",
+      "top": true
+    },
+    {
+      "url": "https://www.tiktok.com/@prestivo3?_r=1&_t=ZS-9Bd3D8PABvQ"
+    },
+    {
+      "url": "https://www.facebook.com/people/Prestivo-Cars/61570318172419/",
+      "sub": "Prestivo Cars"
+    }
   ]
 }

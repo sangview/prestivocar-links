@@ -175,9 +175,9 @@
       // Un réseau par ligne : supprimez une ligne pour le masquer, changez l'ordre librement.
       // Icônes : instagram tiktok facebook pinterest youtube linkedin snapchat x threads phone mail map calendar star shop globe
       links: [
+        { icon: "mobile", label: "Application web", sub: "Réserver depuis votre téléphone", url: "https://prestivocar.com/", top: true },
         { icon: "tiktok", label: "TikTok", sub: "@prestivo3", url: "https://www.tiktok.com/@prestivo3" },
         { icon: "facebook", label: "Facebook", sub: "Prestivo Cars", url: "https://www.facebook.com/people/Prestivo-Cars/61570318172419/" },
-        { icon: "globe", label: "Site web", sub: "prestivocar.com", url: "https://prestivocar.com/" },
       ],
     };
     /* ===================================================================== */
@@ -193,6 +193,7 @@
       snapchat: '<path d="M12 3.5c2.9 0 4.8 2.1 4.8 4.9v2.1l1.7.6-1.2 1.2c.6 1.4 1.7 2.4 2.9 2.8-.9.7-2 .8-2.8 1-.3.8-.7 1.4-1.4 1.4-.9 0-1.9-.7-4-.7s-3.1.7-4 .7c-.7 0-1.1-.6-1.4-1.4-.8-.2-1.9-.3-2.8-1 1.2-.4 2.3-1.4 2.9-2.8L5.5 11.1l1.7-.6V8.4c0-2.8 1.9-4.9 4.8-4.9z"/>',
       x: '<path d="M4 4h4.5L20 20h-4.5z"/><path d="M20 4l-6.6 7.3M4 20l6.6-7.3"/>',
       threads: '<path d="M16.4 11.3c-.4-2.5-2.2-3.8-4.4-3.8-2.6 0-4.2 1.9-4.2 4.5s1.6 4.5 4.2 4.5c2 0 3.6-1.2 3.6-3 0-2.5-3.5-3-5.2-1.8"/><path d="M12 21c5.2 0 8-3.4 8-9s-2.8-9-8-9-8 3.4-8 9 2.8 9 8 9z"/>',
+      mobile: '<rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/>',
       phone: '<path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
       mail: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/>',
       map: '<path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 0 1 13 0c0 5.3-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>',
@@ -225,7 +226,10 @@
                url: `https://wa.me/${wa.number.replace(/\D/g, "")}?text=${encodeURIComponent(wa.message)}` }, true)
       : "";
 
-    document.getElementById("links").innerHTML = waItem + PROFILE.links.map(l => item(l)).join("");
+    // top: true → bouton affiché au-dessus de WhatsApp
+    document.getElementById("links").innerHTML =
+      PROFILE.links.filter(l => l.top).map(l => item(l)).join("") + waItem +
+      PROFILE.links.filter(l => !l.top).map(l => item(l)).join("");
   </script>
 </body>
 </html>
