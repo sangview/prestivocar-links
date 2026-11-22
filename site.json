@@ -1,0 +1,25 @@
+{
+  "name": "Prestivo Cars",
+  "domain": "links.prestivocar.com",
+  "lang": "fr",
+  "tagline": "Location de véhicules de prestige — l'élégance au volant, sans compromis.",
+  "logo": "logo-source.png",
+  "logo_alt": "Prestivo Cars",
+  "og_title": "Prestivo Cars",
+  "og_description": "Nos véhicules, nos réseaux et une réservation directe sur WhatsApp.",
+  "theme": "auto",
+  "accent": null,
+  "sparkles": true,
+  "font": "Jost",
+  "whatsapp": {
+    "number": "+223 72 41 55 39",
+    "message": "Bonjour Prestivo Cars, je souhaiterais réserver un véhicule.",
+    "label": "Réserver sur WhatsApp",
+    "sub": "Disponibilités et tarifs en direct"
+  },
+  "links": [
+    { "url": "https://www.tiktok.com/@prestivo3?_r=1&_t=ZS-9Bd3D8PABvQ" },
+    { "url": "https://www.facebook.com/people/Prestivo-Cars/61570318172419/", "sub": "Prestivo Cars" },
+    { "url": "https://prestivocar.com/" }
+  ]
+}
